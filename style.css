@@ -1,0 +1,189 @@
+body,html {
+    background-color: #747797
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: pixel;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Pixel;
+    src: url(pics/Tickerbit-regular.woff2);
+}
+
+:root {
+    --black: #000;
+    --Gray: #979797;
+    --darkGray: #1b1b1b;
+    --white: #fff;
+}
+::selection {
+    background-color: var(--Gray);
+    color: #292929;
+}
+
+.Hide {
+    display: none;
+}
+/* Game */
+.Game {
+    overflow: hidden;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Racer-txt {
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    margin: .25rem;
+    margin-right: 8.5rem;
+}
+
+.Score {
+    width: 125px;
+    height: 40px;
+    background-image: linear-gradient(to left , #8c00ff, #ca57ff);
+    color: var(--white);
+    font-size: 15px;
+    margin: .25rem;
+    padding: .7rem;    
+    border-radius: 1rem;
+    text-align: center;
+    cursor: default;
+}
+
+/* GameArea */
+.gameArea {    
+    border-right: 10px solid var(--Gray);
+    border-left: 10px solid var(--Gray);
+    background-color: var(--darkGray);
+    width: 250px;
+    height: 94.9vh;
+    position: relative;
+    margin: auto;    
+    overflow: hidden;
+}
+.line {    
+    background-color: var(--white);
+    position: absolute;
+    height: 100px; 
+    width: 10px;
+    margin-left: 115px;
+}
+.car, .enemy {
+    position: absolute;
+    bottom: 200px;
+    margin:auto;       
+    height: 85px;
+    width: 45px;
+    padding: 0;
+    border-radius: 10px;
+    background-image: url(pics/BlackCar.svg);
+    z-index: 1;
+}
+/* Start Screen */
+.startScreen {  
+    background-image: linear-gradient(to right , #151835, #46528a);    
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 13rem;
+    width: 23rem;
+    border-radius: 1.2rem;
+    padding-top: 2rem;
+    z-index: 2;
+}
+.start-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.carLogo {
+    width: 40%;
+    float: left;
+    margin: 0rem 2rem;
+}
+.starttext {
+    font-size: 25px;    
+    color: var(--white);
+    animation: opatext 1s infinite;
+    float: right;
+    margin: 0rem 2rem;
+}
+@keyframes opatext {
+    0% {
+        opacity: 100%;
+    }
+    5% {
+        opacity: 90%;
+    }
+    10% {
+        opacity: 80%;
+    }
+    15% {
+        opacity: 70%;
+    }
+    20% {
+        opacity: 60%;
+    }
+    25% {
+        opacity: 50%;
+    }
+    30% {
+        opacity: 40%;
+    }
+    35% {
+        opacity: 30%;
+    }
+    40% {
+        opacity: 20%;
+    }
+    45% {
+        opacity: 10%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    55% {
+        opacity: 10%;
+    }
+    60% {
+        opacity: 20%;
+    }
+    65% {
+        opacity: 30%;
+    }
+    70% {
+        opacity: 40%;
+    }
+    75% {
+        opacity: 50%;
+    }
+    80% {
+        opacity: 60%;
+    }
+    85% {
+        opacity: 70%;
+    }
+    90% {
+        opacity: 80%;
+    }
+    95% {
+        opacity: 90%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
