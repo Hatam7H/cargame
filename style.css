@@ -7,6 +7,7 @@ body,html {
     padding: 0%;
     font-family: pixel;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 @font-face {
@@ -34,9 +35,13 @@ body,html {
 }
 
 .info {
+    background-color: #1c1c25;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+    border-bottom: 5px solid #9eadf1;
 }
 
 .Racer-txt {
@@ -50,7 +55,7 @@ body,html {
 .Score {
     width: 125px;
     height: 40px;
-    background-image: linear-gradient(to left , #8c00ff, #ca57ff);
+    background-image: linear-gradient(to left , #4c00ff, #8957ff);
     color: var(--white);
     font-size: 15px;
     margin: .25rem;
@@ -66,7 +71,7 @@ body,html {
     border-left: 10px solid var(--Gray);
     background-color: var(--darkGray);
     width: 250px;
-    height: 94.9vh;
+    height: 95.5vh;
     position: relative;
     margin: auto;    
     overflow: hidden;

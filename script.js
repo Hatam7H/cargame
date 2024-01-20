@@ -16,7 +16,7 @@ const RacerLogo = document.querySelector(".Racer-txt")
 
 
 let player= {
-    speed: 4, score: 0
+    speed: 5, score: 0
 }
 
 let buttons= { 
@@ -46,25 +46,22 @@ function playgame() {
     movingline()
     movingenemy(car)
     if (player.score == 500){
-        player.speed = 5
-    }
-    if (player.score == 750){
         player.speed = 6
     }
-    if(player.score == 1250){
-        player.speed = 7
-    }
-    if(player.score == 1500){
+    if (player.score == 1000){
         player.speed = 8
     }
-    if(player.score == 1750){
-        player.speed = 9
-    }
-    if(player.score == 5000){
+    if(player.score == 1500){
         player.speed = 10
     }
+    if(player.score == 2500){
+        player.speed = 12
+    }
+    if(player.score == 5000){
+        player.speed = 14
+    }
     if(player.score == 10000){
-        player.speed = 12.5
+        player.speed = 16
     }
     let road = gamearea.getBoundingClientRect()
     if (player.start) {
@@ -128,10 +125,11 @@ function movingenemy(car) {
 
 function endGame(){
     player.start = false
+    player.speed = 5
     startscreen.classList.remove("Hide")
     startText.innerHTML = "Game Over <br> Click To Start Again"
     startscreen.style.backgroundImage = "linear-gradient(to left , #ff0000, #ff6b6b)"
-    carLogo.style.rotate = "210deg"
+    carLogo.style.rotate = "60deg"
 }
 
 function start() {
